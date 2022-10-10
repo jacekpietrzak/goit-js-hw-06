@@ -20,7 +20,7 @@ function getRandomHexColor() {
 
 function getRandomBackground() {
   const randomColor = getRandomHexColor();
-  // console.log(randomColor);
+  console.log(randomColor);
 
   body.setAttribute("style", `background-color:${randomColor}`);
 
