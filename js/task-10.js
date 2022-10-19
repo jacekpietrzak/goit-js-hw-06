@@ -1,9 +1,5 @@
-const controls = document.querySelector("#controls");
-console.log(controls);
-
-controls.addEventListener("input", (event) => {
-  console.log("input");
-});
+// const controls = document.querySelector("#controls");
+// console.log(controls);
 
 const input = document.querySelector('input[type="number"]');
 console.log(input);
@@ -22,15 +18,11 @@ function getRandomHexColor() {
 }
 
 const inputValue = input.addEventListener("input", (event) => {
-  const inputValue = event.target.valueAsNumber;
-  console.log(inputValue);
-  return inputValue;
+  console.log(event.target.valueAsNumber);
+  return event.target.valueAsNumber;
 });
 
-// const amount = 6;
-
 function createBoxes(amount) {
-  console.log(`amount${amount}`);
   // let height = 30;
   // let width = 30;
   // const randomColor = getRandomHexColor();
@@ -40,4 +32,4 @@ function createBoxes(amount) {
   // );
 }
 
-btnCreate.addEventListener("click", createBoxes);
+btnCreate.addEventListener("click", createBoxes(getAmount));
